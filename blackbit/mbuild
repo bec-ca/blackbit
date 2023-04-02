@@ -1,0 +1,862 @@
+cpp_library:
+  name: analyze_games
+  sources: analyze_games.cpp
+  headers: analyze_games.hpp
+  libs:
+    /bee/file_reader
+    /bee/file_writer
+    /bee/string_util
+    /bee/util
+    /command/cmd
+    /command/command_builder
+    /yasf/cof
+    board
+    generated_game_record
+    rules
+    statistics
+
+cpp_library:
+  name: benchmark
+  sources: benchmark.cpp
+  headers: benchmark.hpp
+  libs:
+    /bee/file_reader
+    /bee/format_vector
+    /bee/queue
+    /bee/time
+    /bee/util
+    /command/cmd
+    /command/command_builder
+    bot_state
+    engine
+    experiment_framework
+    game_result
+    random
+    rules
+    statistics
+
+cpp_library:
+  name: bitboard
+  sources: bitboard.cpp
+  headers: bitboard.hpp
+  libs:
+    board_array
+    color_array
+    debug
+    pieces
+    place
+
+cpp_test:
+  name: bitboard_test
+  sources: bitboard_test.cpp
+  libs:
+    /bee/testing
+    bitboard
+    pieces
+  output: bitboard_test.out
+
+cpp_binary:
+  name: blackbit
+  libs: blackbit_main
+
+cpp_library:
+  name: blackbit_main
+  sources: blackbit_main.cpp
+  libs:
+    /bee/file_reader
+    /bee/span
+    /bee/util
+    /command/command_builder
+    analyze_games
+    benchmark
+    board
+    bot_state
+    communication
+    engine
+    engine_tournament
+    eval_game
+    experiment_runner
+    pcp_generation
+    training
+    view_games
+    view_positions
+    xboard_protocol
+
+cpp_library:
+  name: board
+  sources: board.cpp
+  headers: board.hpp
+  libs:
+    /bee/error
+    /bee/string_util
+    bitboard
+    board_array
+    castle_flags
+    color_array
+    debug
+    experiment_framework
+    generated_board_hashes
+    move
+    piece_type_array
+    pieces
+    score
+    static_vector
+
+cpp_library:
+  name: board_array
+  headers: board_array.hpp
+  libs:
+    place
+    specialized_array
+
+cpp_test:
+  name: board_test
+  sources: board_test.cpp
+  libs:
+    /bee/error
+    /bee/testing
+    board
+    game_result
+    rules
+  output: board_test.out
+
+cpp_library:
+  name: bot_state
+  sources: bot_state.cpp
+  headers: bot_state.hpp
+  libs:
+    /bee/format_vector
+    /bee/span
+    communication
+    engine
+    eval
+    experiment_framework
+    game_result
+    pcp
+    rules
+    search_result_info
+
+cpp_library:
+  name: castle_flags
+  headers: castle_flags.hpp
+  libs:
+    generated_board_hashes
+    pieces
+
+cpp_library:
+  name: color
+  sources: color.cpp
+  headers: color.hpp
+  libs: /bee/to_string
+
+cpp_library:
+  name: color_array
+  headers: color_array.hpp
+  libs:
+    color
+    specialized_array
+
+cpp_library:
+  name: communication
+  sources: communication.cpp
+  headers: communication.hpp
+  libs:
+    /bee/error
+    /bee/file_descriptor
+    debug
+
+cpp_library:
+  name: compare_engines
+  sources: compare_engines.cpp
+  headers: compare_engines.hpp
+  libs:
+    /bee/error
+    /bee/file_reader
+    /bee/file_writer
+    /bee/format_vector
+    /bee/sampler
+    /bee/span
+    /bee/string_util
+    /bee/time_block
+    /bee/util
+    /bif/array
+    /bif/bifer
+    /bif/debif
+    /bif/string
+    /yasf/cof
+    engine
+    generated_game_record
+    parallel_map
+    random
+    rules
+    self_play
+
+cpp_library:
+  name: compare_engines_async
+  sources: compare_engines_async.cpp
+  headers: compare_engines_async.hpp
+  libs:
+    /async/async
+    /bee/error
+    /bee/file_reader
+    /bee/file_writer
+    /bee/format_vector
+    /yasf/cof
+    generated_game_record
+    random
+    self_play_async
+
+cpp_library:
+  name: debug
+  headers: debug.hpp
+
+cpp_library:
+  name: engine
+  sources: engine.cpp
+  headers: engine.hpp
+  libs:
+    /bee/alarms
+    /bee/format_optional
+    /bee/format_vector
+    /bee/queue
+    /bee/ref
+    /bee/span
+    /bee/time
+    board
+    board_array
+    engine_core
+    eval
+    experiment_framework
+    move
+    move_history
+    mpv_search
+    rules
+    transposition_table
+
+cpp_library:
+  name: engine_core
+  sources: engine_core.cpp
+  headers: engine_core.hpp
+  libs:
+    /bee/format_map
+    /bee/format_memory
+    /bee/format_vector
+    /bee/nref
+    /bee/ref
+    board
+    eval
+    experiment_framework
+    move
+    move_history
+    pcp
+    rules
+    score
+    search_result_info
+    transposition_table
+
+cpp_test:
+  name: engine_core_test
+  sources: engine_core_test.cpp
+  libs:
+    /bee/format_optional
+    /bee/testing
+    engine_core
+    eval
+    transposition_table
+  output: engine_core_test.out
+
+cpp_library:
+  name: engine_interface
+  sources: engine_interface.cpp
+  headers: engine_interface.hpp
+  libs:
+    /async/task
+    /bee/error
+    /bee/time
+    move
+
+cpp_test:
+  name: engine_test
+  sources: engine_test.cpp
+  libs:
+    /bee/format
+    /bee/format_vector
+    /bee/testing
+    engine
+    rules
+  output: engine_test.out
+  os_filter: linux
+
+cpp_library:
+  name: engine_tournament
+  sources: engine_tournament.cpp
+  headers: engine_tournament.hpp
+  libs:
+    /async/async_command
+    /async/deferred_awaitable
+    /bee/file_reader
+    /bee/file_writer
+    /bee/format_vector
+    /bee/pretty_print
+    /bee/sampler
+    /bee/string_util
+    /command/cmd
+    /yasf/config_parser
+    /yasf/serializer
+    external_engine_protocols
+    generated_game_record
+    random
+    self_play_async
+
+cpp_library:
+  name: eval
+  sources: eval.cpp
+  headers: eval.hpp
+  libs:
+    bitboard
+    board
+    color
+    eval_scratch
+    experiment_framework
+    pieces
+    rules
+    score
+
+cpp_library:
+  name: eval_game
+  sources: eval_game.cpp
+  headers: eval_game.hpp
+  libs:
+    /bee/file_reader
+    /bee/format_optional
+    /command/cmd
+    /command/command_builder
+    /yasf/cof
+    engine
+    generated_game_record
+    rules
+
+cpp_library:
+  name: eval_scratch
+  headers: eval_scratch.hpp
+  libs:
+    bitboard
+    player_pair
+
+cpp_test:
+  name: eval_test
+  sources: eval_test.cpp
+  libs:
+    /bee/testing
+    board
+    eval
+    rules
+  output: eval_test.out
+
+cpp_library:
+  name: experiment_framework
+  sources: experiment_framework.cpp
+  headers: experiment_framework.hpp
+  libs: random
+
+cpp_library:
+  name: experiment_runner
+  sources: experiment_runner.cpp
+  headers: experiment_runner.hpp
+  libs:
+    /bee/span
+    /command/cmd
+    /command/command_builder
+    compare_engines
+    random
+    self_play
+
+cpp_library:
+  name: external_engine
+  sources: external_engine.cpp
+  headers: external_engine.hpp
+  libs:
+    /async/async
+    /async/async_fd
+    /async/async_process
+    /async/pipe
+    /bee/error
+    /bee/format
+    /bee/sub_process
+    board
+    engine_interface
+    move
+
+cpp_library:
+  name: external_engine_protocols
+  sources: external_engine_protocols.cpp
+  headers: external_engine_protocols.hpp
+  libs:
+    /bee/format
+    /bee/string_util
+    external_engine
+
+cpp_binary:
+  name: game_record
+  libs: game_record_main
+
+cpp_library:
+  name: game_record_main
+  sources: game_record_main.cpp
+  libs:
+    /yasf/core_types
+    /yasf/generator
+    /yasf/generator_main_lib
+
+cpp_library:
+  name: game_result
+  sources: game_result.cpp
+  headers: game_result.hpp
+  libs:
+    /bee/to_string
+    /yasf/serializer
+    color
+
+gen_rule:
+  name: gen_game_record
+  binary: game_record
+  flags:
+    gen
+    --base-name
+    generated_game_record
+    --output-dir
+    .
+  outputs:
+    generated_game_record.cpp
+    generated_game_record.hpp
+
+cpp_binary:
+  name: gen_hashes
+  libs: gen_hashes_main
+
+cpp_library:
+  name: gen_hashes_main
+  sources: gen_hashes_main.cpp
+  libs:
+    /bee/format
+    random
+
+cpp_library:
+  name: generated_board_hashes
+  headers: generated_board_hashes.hpp
+  libs:
+    board_array
+    color_array
+    piece_type_array
+
+cpp_library:
+  name: generated_game_record
+  sources: generated_game_record.cpp
+  headers: generated_game_record.hpp
+  libs:
+    /bee/error
+    /bee/format
+    /bee/span
+    /bee/time
+    /bee/util
+    /yasf/parser_helpers
+    /yasf/serializer
+    /yasf/to_stringable_mixin
+    game_result
+    move
+    score
+
+cpp_library:
+  name: move
+  sources: move.cpp
+  headers: move.hpp
+  libs:
+    /yasf/serializer
+    /yasf/value
+    pieces
+    place
+
+cpp_library:
+  name: move_history
+  sources: move_history.cpp
+  headers: move_history.hpp
+  libs:
+    board
+    board_array
+    move
+
+cpp_library:
+  name: mpv_search
+  sources: mpv_search.cpp
+  headers: mpv_search.hpp
+  libs:
+    /bee/nref
+    board
+    engine_core
+    eval
+    move
+    move_history
+    rules
+    search_result_info
+    transposition_table
+
+cpp_library:
+  name: parallel_map
+  headers: parallel_map.hpp
+  libs: /bee/queue
+
+cpp_test:
+  name: parallel_map_test
+  sources: parallel_map_test.cpp
+  libs:
+    /bee/format
+    /bee/format_vector
+    /bee/sort
+    /bee/testing
+    /bee/util
+    parallel_map
+  output: parallel_map_test.out
+
+cpp_library:
+  name: pcp
+  sources: pcp.cpp
+  headers: pcp.hpp
+  libs:
+    /bee/copy
+    /stone/stone_reader
+    /yasf/cof
+    generated_game_record
+    search_result_info
+
+cpp_library:
+  name: pcp_generation
+  sources: pcp_generation.cpp
+  headers: pcp_generation.hpp
+  libs:
+    /bee/file_reader
+    /bee/filesystem
+    /bee/format_memory
+    /bee/format_vector
+    /bee/nref
+    /bee/ref
+    /bee/sort
+    /command/cmd
+    /command/command_builder
+    /command/command_flags
+    /stone/stone_reader
+    /stone/stone_writer
+    /yasf/cof
+    board
+    engine
+    eval
+    generated_game_record
+    pcp
+    rules
+
+cpp_library:
+  name: pgn_parser
+  sources: pgn_parser.cpp
+  headers: pgn_parser.hpp
+  libs:
+    /bee/error
+    /bee/file_reader
+
+cpp_test:
+  name: pgn_parser_test
+  sources: pgn_parser_test.cpp
+  libs:
+    /bee/format_map
+    /bee/format_vector
+    /bee/testing
+    pgn_parser
+  output: pgn_parser_test.out
+
+cpp_binary:
+  name: pgn_reader
+  libs: pgn_reader_main
+
+cpp_library:
+  name: pgn_reader_main
+  sources: pgn_reader_main.cpp
+  libs:
+    /bee/format
+    /yasf/cof
+    board
+    game_result
+    generated_game_record
+    pgn_parser
+    random
+    rules
+
+cpp_library:
+  name: piece_type_array
+  headers: piece_type_array.hpp
+  libs:
+    pieces
+    specialized_array
+
+cpp_library:
+  name: pieces
+  headers: pieces.hpp
+  libs: /bee/to_string
+
+cpp_library:
+  name: place
+  headers: place.hpp
+  libs:
+    /bee/error
+    color
+
+cpp_library:
+  name: player_pair
+  headers: player_pair.hpp
+  libs: color
+
+cpp_library:
+  name: random
+  sources: random.cpp
+  headers: random.hpp
+
+cpp_library:
+  name: rules
+  sources: rules.cpp
+  headers: rules.hpp
+  libs:
+    /bee/format_optional
+    /bee/format_vector
+    board
+    eval_scratch
+    game_result
+    pieces
+
+cpp_test:
+  name: rules_test
+  sources: rules_test.cpp
+  libs:
+    /bee/testing
+    rules
+  output: rules_test.out
+
+cpp_library:
+  name: score
+  sources: score.cpp
+  headers: score.hpp
+  libs:
+    /bee/format
+    /bee/util
+    /yasf/serializer
+    color
+
+cpp_test:
+  name: score_test
+  sources: score_test.cpp
+  libs:
+    /bee/testing
+    score
+  output: score_test.out
+
+cpp_library:
+  name: search_result_info
+  sources: search_result_info.cpp
+  headers: search_result_info.hpp
+  libs:
+    /bee/format_vector
+    /bee/util
+    board
+    move
+    rules
+    score
+
+cpp_library:
+  name: self_play
+  sources: self_play.cpp
+  headers: self_play.hpp
+  libs:
+    /bee/format_vector
+    /bee/span
+    board
+    engine
+    eval
+    experiment_framework
+    generated_game_record
+    rules
+
+cpp_library:
+  name: self_play_async
+  sources: self_play_async.cpp
+  headers: self_play_async.hpp
+  libs:
+    /async/async
+    /async/task
+    /bee/format_vector
+    engine_interface
+    game_result
+    generated_game_record
+    move
+    pieces
+    rules
+
+cpp_library:
+  name: specialized_array
+  headers: specialized_array.hpp
+  libs: /bee/format
+
+cpp_library:
+  name: static_vector
+  headers: static_vector.hpp
+
+cpp_library:
+  name: statistics
+  sources: statistics.cpp
+  headers: statistics.hpp
+
+cpp_library:
+  name: termino_board
+  sources: termino_board.cpp
+  headers: termino_board.hpp
+  libs:
+    /termino/cell
+    /termino/element
+    /termino/grid
+    /termino/text_box
+    board
+    pieces
+    place
+
+cpp_library:
+  name: termino_engine
+  sources: termino_engine.cpp
+  headers: termino_engine.hpp
+  libs:
+    /async/async
+    /async/scheduler_context
+    /bee/error
+    /bee/format_vector
+    /bee/string_util
+    /termino/element
+    /termino/text_box
+    board
+    engine
+
+cpp_library:
+  name: training
+  sources: training.cpp
+  headers: training.hpp
+  libs:
+    /bee/file_reader
+    /bee/file_writer
+    /bee/format_map
+    /bee/format_optional
+    /bee/format_vector
+    /bee/pretty_print
+    /bee/sort
+    /bee/string_util
+    /bee/util
+    /bif/array
+    /bif/bifer
+    /bif/debif
+    /bif/string
+    /command/command_builder
+    /command/group_builder
+    /ml/datapoint
+    /ml/ewma
+    /ml/fast_tree
+    /ml/gut
+    /yasf/cof
+    color
+    compare_engines
+    engine
+    eval
+    experiment_framework
+    game_result
+    pieces
+    rules
+    search_result_info
+    training_features
+
+cpp_library:
+  name: training_features
+  sources: training_features.cpp
+  headers: training_features.hpp
+  libs:
+    eval
+    static_vector
+
+cpp_library:
+  name: transposition_table
+  sources: transposition_table.cpp
+  headers: transposition_table.hpp
+  libs:
+    board
+    score
+
+cpp_library:
+  name: view_games
+  sources: view_games.cpp
+  headers: view_games.hpp
+  libs:
+    /async/async_command
+    /async/scheduler_context
+    /bee/file_reader
+    /bee/format
+    /bee/format_optional
+    /bee/format_vector
+    /bee/string_util
+    /command/cmd
+    /termino/label
+    /termino/margin
+    /termino/shelf
+    /termino/stack
+    /termino/termino
+    /termino/termino_app
+    /termino/text_box
+    /yasf/cof
+    board
+    eval
+    generated_game_record
+    pcp
+    rules
+    termino_board
+    termino_engine
+
+cpp_library:
+  name: view_positions
+  sources: view_positions.cpp
+  headers: view_positions.hpp
+  libs:
+    /async/async_command
+    /async/scheduler_context
+    /bee/file_reader
+    /bee/format
+    /bee/format_optional
+    /bee/format_vector
+    /bee/string_util
+    /command/cmd
+    /termino/margin
+    /termino/shelf
+    /termino/stack
+    /termino/termino
+    /termino/termino_app
+    /termino/text_box
+    /yasf/cof
+    board
+    eval
+    generated_game_record
+    rules
+    termino_board
+    termino_engine
+
+cpp_library:
+  name: xboard_protocol
+  sources: xboard_protocol.cpp
+  headers: xboard_protocol.hpp
+  libs:
+    /bee/format_filesystem
+    /bee/string_util
+    /command/cmd
+    /command/command_builder
+    bot_state
+    communication
+    pcp
+    pieces
+

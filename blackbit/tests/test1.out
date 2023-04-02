@@ -1,0 +1,37 @@
+feature myname="blackbit" ping=1 usermove=1 draw=0 variants="normal" sigint=0 sigterm=0 setboard=1 playother=1 analyze=1 colors=0 done=1
+1 0 0 26 e5
+2 24 0 249 e6 Be2
+3 -6 1 1303 e6 Be2 Bc5
+4 28 2 9399 e5 Nf3 Nf6
+5 -2 3 49778 Nc6 Nc3 e5 Bc4 Bb4
+6 23 7 161346 Nc6 Nc3 e5 Nf3 Bc5 Bb5
+7 -5 20 817445 Nc6 Nc3 Nf6 Bc4 Ne5 Be2 e6
+8 24 138 6721617 d5 exd5 Qxd5 Nc3 Qe6 Qe2 Nc6 Nf3
+move d7d5
+1 -53 0 56 dxe4
+2 -16 0 519 Nc6 e5
+3 -60 1 2448 dxe4 Nc3 Nc6
+4 -39 2 11620 dxe4 Nc3 Nc6 Be3
+5 -52 4 64338 dxe4 Nc3 Nf6 Be2 Nc6
+6 -29 9 252132 dxe4 Nc3 Nf6 Be3 Nc6 Bb5
+7 -43 34 1395453 dxe4 Nc3 Nf6 Be2 Be6 Bg5 Nc6
+8 -30 129 6031416 dxe4 Nc3 Nf6 Be2 h6 Bf4 Nc6 d5
+move d5e4
+1 -139 0 43 Nc6
+2 -108 0 641 Nc6 Bf4
+3 -126 1 4587 Bd7 Bf4 Na6
+4 -87 2 19259 Nf6 Nc3 Nc6
+5 -107 4 96789 Nf6 Be2 Nc6 d5 Ne5
+6 -85 14 560247 g6 d5 Bg7 Nd2 Bf5
+7 -95 50 2289662 e5 dxe5 Qxd1 Kxd1 Nc6 Nc3 Bg4
+8 -71 185 8643124 e6 Nc3 Bb4 a3 Bxc3 bxc3 Nc6 Be2
+move e7e6
+1 -340 0 73 exf3
+2 -340 0 815 exf3 gxf3
+3 -408 1 4453 exf3 Qxf3 Qxd4
+4 -399 2 19952 exf3 Nc3 Nc6 Be3
+5 -426 4 111540 exf3 Nc3 fxg2 Bxg2 Nd7
+6 -371 12 409379 exf3 gxf3 Nc6 Be3 e5 dxe5
+7 -394 39 1905797 exf3 gxf3 Nc6 Be3 Bb4 Nc3 Nf6
+8 -366 154 6821513 exf3 gxf3 Nc6 Be3 e5 d5 Bb4 Nc3
+move e4f3

@@ -1,0 +1,532 @@
+================================================================================
+Test: pawn_moves_from_initial
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -
+a2a3: legal:true
+a2a4: legal:true
+b2b3: legal:true
+b2b4: legal:true
+c2c3: legal:true
+c2c4: legal:true
+d2d3: legal:true
+d2d4: legal:true
+e2e3: legal:true
+e2e4: legal:true
+f2f3: legal:true
+f2f4: legal:true
+g2g3: legal:true
+g2g4: legal:true
+h2h3: legal:true
+h2h4: legal:true
+num moves: 16
+---------------------------------
+
+================================================================================
+Test: knight_moves_from_initial
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -
+b1a3: legal:true
+b1c3: legal:true
+g1f3: legal:true
+g1h3: legal:true
+num moves: 4
+---------------------------------
+
+================================================================================
+Test: bishop_moves
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -
+num moves: 0
+---------------------------------
+rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -
+f1e2: legal:true
+f1d3: legal:true
+f1c4: legal:true
+f1b5: legal:true
+f1a6: legal:true
+num moves: 5
+---------------------------------
+rnbqkbnr/pppppppp/8/8/2B1P3/8/PPPP1PPP/RNBQK1NR w KQkq -
+c4f1: legal:true
+c4e2: legal:true
+c4b3: legal:true
+c4d3: legal:true
+c4b5: legal:true
+c4d5: legal:true
+c4a6: legal:true
+c4e6: legal:true
+c4f7: legal:true
+num moves: 9
+---------------------------------
+8/8/8/8/4B3/8/8/8 w KQkq -
+e4b1: legal:true
+e4h1: legal:true
+e4c2: legal:true
+e4g2: legal:true
+e4d3: legal:true
+e4f3: legal:true
+e4d5: legal:true
+e4f5: legal:true
+e4c6: legal:true
+e4g6: legal:true
+e4b7: legal:true
+e4h7: legal:true
+e4a8: legal:true
+num moves: 13
+---------------------------------
+8/8/8/3p4/4B3/8/8/8 w KQkq -
+e4b1: legal:true
+e4h1: legal:true
+e4c2: legal:true
+e4g2: legal:true
+e4d3: legal:true
+e4f3: legal:true
+e4d5: legal:true
+e4f5: legal:true
+e4g6: legal:true
+e4h7: legal:true
+num moves: 10
+---------------------------------
+
+================================================================================
+Test: rook_moves
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -
+num moves: 0
+---------------------------------
+rnbqkbnr/pppppppp/8/8/8/8/1PPPPPP1/RNBQKBNR w KQkq -
+a1a2: legal:true
+a1a3: legal:true
+a1a4: legal:true
+a1a5: legal:true
+a1a6: legal:true
+a1a7: legal:true
+h1h2: legal:true
+h1h3: legal:true
+h1h4: legal:true
+h1h5: legal:true
+h1h6: legal:true
+h1h7: legal:true
+num moves: 12
+---------------------------------
+rnbqkbnr/pppppppp/8/8/4R3/8/1PPPPPP1/1NBQKBN1 w KQkq -
+e4e3: legal:true
+e4a4: legal:true
+e4b4: legal:true
+e4c4: legal:true
+e4d4: legal:true
+e4f4: legal:true
+e4g4: legal:true
+e4h4: legal:true
+e4e5: legal:true
+e4e6: legal:true
+e4e7: legal:true
+num moves: 11
+---------------------------------
+8/8/8/8/3pR3/8/8/8 w KQkq -
+e4e1: legal:true
+e4e2: legal:true
+e4e3: legal:true
+e4d4: legal:true
+e4f4: legal:true
+e4g4: legal:true
+e4h4: legal:true
+e4e5: legal:true
+e4e6: legal:true
+e4e7: legal:true
+e4e8: legal:true
+num moves: 11
+---------------------------------
+
+================================================================================
+Test: queen_moves
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -
+num moves: 0
+---------------------------------
+rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -
+d1e2: legal:true
+d1f3: legal:true
+d1g4: legal:true
+d1h5: legal:true
+num moves: 4
+---------------------------------
+8/8/8/8/4Q3/8/8/8 w KQkq -
+e4b1: legal:true
+e4e1: legal:true
+e4h1: legal:true
+e4c2: legal:true
+e4e2: legal:true
+e4g2: legal:true
+e4d3: legal:true
+e4e3: legal:true
+e4f3: legal:true
+e4a4: legal:true
+e4b4: legal:true
+e4c4: legal:true
+e4d4: legal:true
+e4f4: legal:true
+e4g4: legal:true
+e4h4: legal:true
+e4d5: legal:true
+e4e5: legal:true
+e4f5: legal:true
+e4c6: legal:true
+e4e6: legal:true
+e4g6: legal:true
+e4b7: legal:true
+e4e7: legal:true
+e4h7: legal:true
+e4a8: legal:true
+e4e8: legal:true
+num moves: 27
+---------------------------------
+8/8/8/8/3pQ3/8/8/8 w KQkq -
+e4b1: legal:true
+e4e1: legal:true
+e4h1: legal:true
+e4c2: legal:true
+e4e2: legal:true
+e4g2: legal:true
+e4d3: legal:true
+e4e3: legal:true
+e4f3: legal:true
+e4d4: legal:true
+e4f4: legal:true
+e4g4: legal:true
+e4h4: legal:true
+e4d5: legal:true
+e4e5: legal:true
+e4f5: legal:true
+e4c6: legal:true
+e4e6: legal:true
+e4g6: legal:true
+e4b7: legal:true
+e4e7: legal:true
+e4h7: legal:true
+e4a8: legal:true
+e4e8: legal:true
+num moves: 24
+---------------------------------
+
+================================================================================
+Test: king_moves
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -
+num moves: 0
+---------------------------------
+rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR w KQkq -
+e1e2: legal:true
+num moves: 1
+---------------------------------
+8/8/8/8/4K3/8/8/8 w KQkq -
+e4d3: legal:true
+e4e3: legal:true
+e4f3: legal:true
+e4d4: legal:true
+e4f4: legal:true
+e4d5: legal:true
+e4e5: legal:true
+e4f5: legal:true
+num moves: 8
+---------------------------------
+8/8/8/8/8/8/8/4K3 w KQkq -
+e1d1: legal:true
+e1f1: legal:true
+e1d2: legal:true
+e1e2: legal:true
+e1f2: legal:true
+num moves: 5
+---------------------------------
+8/8/8/8/8/8/8/4K3 w KQ -
+e1d1: legal:true
+e1f1: legal:true
+e1d2: legal:true
+e1e2: legal:true
+e1f2: legal:true
+num moves: 5
+---------------------------------
+8/8/8/8/8/8/8/4K3 w K -
+e1d1: legal:true
+e1f1: legal:true
+e1d2: legal:true
+e1e2: legal:true
+e1f2: legal:true
+num moves: 5
+---------------------------------
+8/8/8/8/8/8/8/4K3 w Q -
+e1d1: legal:true
+e1f1: legal:true
+e1d2: legal:true
+e1e2: legal:true
+e1f2: legal:true
+num moves: 5
+---------------------------------
+8/8/8/8/8/8/8/4K3 w -
+e1d1: legal:true
+e1f1: legal:true
+e1d2: legal:true
+e1e2: legal:true
+e1f2: legal:true
+num moves: 5
+---------------------------------
+
+================================================================================
+Test: castle
+k7/8/8/8/8/8/8/4K2R w KQkq -
+num moves: 15
+Rf1: valid:true mate:false
+Rg1: valid:true mate:false
+Rh2: valid:true mate:false
+Rh3: valid:true mate:false
+Rh4: valid:true mate:false
+Rh5: valid:true mate:false
+Rh6: valid:true mate:false
+Rh7: valid:true mate:false
+Rh8+: valid:true mate:false
+Kd1: valid:true mate:false
+Kf1: valid:true mate:false
+O-O: valid:true mate:false
+Kd2: valid:true mate:false
+Ke2: valid:true mate:false
+Kf2: valid:true mate:false
+---------------------------------
+k3r3/8/8/8/8/8/8/4K2R w KQkq -
+num moves: 14
+Rf1: valid:false mate:false
+Rg1: valid:false mate:false
+Rh2: valid:false mate:false
+Rh3: valid:false mate:false
+Rh4: valid:false mate:false
+Rh5: valid:false mate:false
+Rh6: valid:false mate:false
+Rh7: valid:false mate:false
+Rh8: valid:false mate:false
+Kd1: valid:true mate:false
+Kf1: valid:true mate:false
+Kd2: valid:true mate:false
+Ke2: valid:false mate:false
+Kf2: valid:true mate:false
+---------------------------------
+k4r2/8/8/8/8/8/8/4K2R w KQkq -
+num moves: 14
+Rf1: valid:true mate:false
+Rg1: valid:true mate:false
+Rh2: valid:true mate:false
+Rh3: valid:true mate:false
+Rh4: valid:true mate:false
+Rh5: valid:true mate:false
+Rh6: valid:true mate:false
+Rh7: valid:true mate:false
+Rh8: valid:true mate:false
+Kd1: valid:true mate:false
+Kf1: valid:false mate:false
+Kd2: valid:true mate:false
+Ke2: valid:true mate:false
+Kf2: valid:false mate:false
+---------------------------------
+k5r1/8/8/8/8/8/8/4K2R w KQkq -
+num moves: 14
+Rf1: valid:true mate:false
+Rg1: valid:true mate:false
+Rh2: valid:true mate:false
+Rh3: valid:true mate:false
+Rh4: valid:true mate:false
+Rh5: valid:true mate:false
+Rh6: valid:true mate:false
+Rh7: valid:true mate:false
+Rh8: valid:true mate:false
+Kd1: valid:true mate:false
+Kf1: valid:true mate:false
+Kd2: valid:true mate:false
+Ke2: valid:true mate:false
+Kf2: valid:true mate:false
+---------------------------------
+k6r/8/8/8/8/8/8/4K2R w KQkq -
+num moves: 15
+Rf1: valid:true mate:false
+Rg1: valid:true mate:false
+Rh2: valid:true mate:false
+Rh3: valid:true mate:false
+Rh4: valid:true mate:false
+Rh5: valid:true mate:false
+Rh6: valid:true mate:false
+Rh7: valid:true mate:false
+Rxh8+: valid:true mate:false
+Kd1: valid:true mate:false
+Kf1: valid:true mate:false
+O-O: valid:true mate:false
+Kd2: valid:true mate:false
+Ke2: valid:true mate:false
+Kf2: valid:true mate:false
+---------------------------------
+
+================================================================================
+Test: bug
+1r3k2/p2n1ppp/b1p2n2/5B2/4N3/P1q5/2P1pPPP/2RQK2R b - - 0 20
+num moves: 52
+g5+: valid:true mate:false
+g6+: valid:true mate:false
+h5+: valid:true mate:false
+h6+: valid:true mate:false
+c5+: valid:true mate:false
+exd1=Q+: valid:true mate:false
+Nc5+: valid:true mate:false
+Ne5+: valid:true mate:false
+Nb6+: valid:true mate:false
+Nxe4+: valid:true mate:false
+Ng4+: valid:true mate:false
+Nd5+: valid:true mate:false
+Nh5+: valid:true mate:false
+Ne8+: valid:true mate:false
+Ng8+: valid:true mate:false
+Bd3+: valid:true mate:false
+Bc4+: valid:true mate:false
+Bb5+: valid:true mate:false
+Bb7+: valid:true mate:false
+Bc8+: valid:true mate:false
+Rb1+: valid:true mate:false
+Rb2+: valid:true mate:false
+Rb3+: valid:true mate:false
+Rb4+: valid:true mate:false
+Rb5+: valid:true mate:false
+Rb6+: valid:true mate:false
+Rb7+: valid:true mate:false
+Ra8+: valid:true mate:false
+Rc8+: valid:true mate:false
+Rd8+: valid:true mate:false
+Re8+: valid:true mate:false
+Qa1: valid:true mate:false
+Qxe1: valid:true mate:false
+Qb2: valid:true mate:false
+Qxc2: valid:true mate:false
+Qd2+: valid:true mate:false
+Qxa3: valid:true mate:false
+Qb3: valid:true mate:false
+Qd3: valid:true mate:false
+Qe3: valid:true mate:false
+Qf3: valid:true mate:false
+Qg3: valid:true mate:false
+Qh3: valid:true mate:false
+Qb4+: valid:true mate:false
+Qc4: valid:true mate:false
+Qd4: valid:true mate:false
+Qa5+: valid:true mate:false
+Qc5: valid:true mate:false
+Qe5: valid:true mate:false
+Ke7+: valid:true mate:false
+Ke8+: valid:true mate:false
+Kg8+: valid:true mate:false
+---------------------------------
+
+================================================================================
+Test: mate_bug
+k6/2p5/p2qp3/p6p/2KPb2P/1P3r2/P1R5/R7 b - - 0 42
+num moves: 43
+c5: valid:true mate:false
+c6: valid:true mate:false
+e5: valid:true mate:false
+a4: valid:true mate:false
+Bxc2: valid:true mate:false
+Bd3+: valid:true mate:false
+Bd5#: valid:true mate:true
+Bf5: valid:true mate:false
+Bc6: valid:true mate:false
+Bg6: valid:true mate:false
+Bb7: valid:true mate:false
+Bh7: valid:true mate:false
+Rf1: valid:true mate:false
+Rf2: valid:true mate:false
+Rxb3: valid:true mate:false
+Rc3+: valid:true mate:false
+Rd3: valid:true mate:false
+Re3: valid:true mate:false
+Rg3: valid:true mate:false
+Rh3: valid:true mate:false
+Rf4: valid:true mate:false
+Rf5: valid:true mate:false
+Rf6: valid:true mate:false
+Rf7: valid:true mate:false
+Rf8: valid:true mate:false
+Qh2: valid:true mate:false
+Qa3: valid:true mate:false
+Qg3: valid:true mate:false
+Qb4#: valid:true mate:true
+Qxd4+: valid:true mate:false
+Qf4: valid:true mate:false
+Qc5+: valid:true mate:false
+Qd5#: valid:true mate:true
+Qe5: valid:true mate:false
+Qb6: valid:true mate:false
+Qc6#: valid:true mate:true
+Qd7: valid:true mate:false
+Qe7: valid:true mate:false
+Qd8: valid:true mate:false
+Qf8: valid:true mate:false
+Ka7: valid:true mate:false
+Kb7: valid:true mate:false
+Kb8: valid:true mate:false
+---------------------------------
+
+================================================================================
+Test: draw
+k7/8/K7/8/8/8/8/8 b - - 0 42
+White:king:1
+Black:king:1
+is_draw: true
+---------------------------------
+k7/8/K7/8/n7/8/8/8 b - - 0 42
+White:king:1
+Black:knight:1
+Black:king:1
+is_draw: true
+---------------------------------
+k7/8/K7/8/N7/8/8/8 b - - 0 42
+White:knight:1
+White:king:1
+Black:king:1
+is_draw: true
+---------------------------------
+k7/8/K7/8/b7/8/8/8 b - - 0 42
+White:king:1
+Black:bishop:1
+Black:king:1
+is_draw: true
+---------------------------------
+k7/8/K7/8/B7/8/8/8 b - - 0 42
+White:bishop:1
+White:king:1
+Black:king:1
+is_draw: true
+---------------------------------
+k7/8/K7/8/B7/B7/8/8 b - - 0 42
+White:bishop:2
+White:king:1
+Black:king:1
+is_draw: false
+---------------------------------
+k7/8/K7/8/N7/N7/8/8 b - - 0 42
+White:knight:2
+White:king:1
+Black:king:1
+is_draw: false
+---------------------------------
+k7/8/K7/8/8/8/8/r7 b - - 0 42
+White:king:1
+Black:rook:1
+Black:king:1
+is_draw: false
+---------------------------------
+k7/8/K7/8/8/8/8/R7 b - - 0 42
+White:rook:1
+White:king:1
+Black:king:1
+is_draw: false
+---------------------------------
+
+================================================================================
+Test: pretty_move
+Rac1
+Rc1
+Rhc1
+Ra3
+R4a3
+R1a3
+Ncd4
+Nc6d4
+Nc6xd4
+

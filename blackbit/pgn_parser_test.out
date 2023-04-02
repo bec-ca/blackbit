@@ -1,0 +1,17 @@
+================================================================================
+Test: BASIC
+(Date, tomorrow) (Event, foo) (Result, 1-0) (Round, 11) (Site, over the rainbow)
+foo bar bla ha bar foo
+
+================================================================================
+Test: BASIC_MULTI
+(Date, tomo"rrow) (Event, fo\o) (Result, 1-0) (Round, 11) (Site, over the rainbow)
+foo bar bla ha bar foo
+(Date, yesterday) (Event, other) (Result, 1-1) (Round, -11) (Site, under the rainbow)
+bar foo baz hi ho foo
+
+================================================================================
+Test: WEIRD
+(Date, tomorrow) (Event, foo) (Result, 1-0) (Round, 11) (Site, over the rainbow)
+foo bar bla ha bar foo
+
